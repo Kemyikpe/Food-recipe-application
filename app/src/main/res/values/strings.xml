@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">food_recipe</string>
+    <string name="hungry">Food for the Soul, App for the Hungry.</string>
+    <string name="note">Unleash Your Inner Foodie \nwith Every Tap.</string>
+    <string name="next">Next</string>
+    <string name="food_house">Food House</string>
+    <string name="login_to_your_account">Login To Your Account</string>
+    <string name="account">Don\'t have an account?</string>
+    <string name="choose_location">Choose Location</string>
+    <string name="location_services">To provide you with the best dining experience, we need your permission to access your device\'s location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience.\"</string>
+    <string name="favourite">Explore Your Favourite Food</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
