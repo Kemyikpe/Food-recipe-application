@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.starthub.food_recipe.R
+import com.starthub.food_recipe.adapter.CartAdapter
+import com.starthub.food_recipe.databinding.FragmentCartBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,43 +21,38 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class CartFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+    private lateinit var binding : FragmentCartBinding
+    override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        binding = FragmentCartBinding.inflate(inflater,container,false )
+
+        val  cartFoodName = listOf("Burger","sandwich","momo","item","sandwish","momo","Burger","momo")
+        val  cartItemPrice = listOf("$5","$6","$9","$10","$10","$8","$8","$8",)
+        val cartImage = listOf(
+            R.drawable.mealone,
+            R.drawable.mealtwo,
+            R.drawable.mealone,
+            R.drawable.mealthree,
+            R.drawable.mealtwo,
+            R.drawable.mealone,
+            R.drawable.mealone,
+            R.drawable.mealone,
+        )
+        val adapter = CartAdapter(ArrayList(cartFoodName),ArrayList(cartItemPrice),ArrayList(cartImage))
+        binding.cartRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.cartRecyclerView.adapter =adapter
+        return binding.root
+
+
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CartFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CartFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+
     }
 }

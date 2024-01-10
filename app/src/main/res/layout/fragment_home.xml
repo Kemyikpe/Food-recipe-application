@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/viewAllMenu"
         android:layout_width="110dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
@@ -65,7 +65,7 @@
         android:maxHeight="800dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/viewAllMenu"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
