@@ -10,7 +10,7 @@
         android:icon="@drawable/cart"/>
     <item android:title="Search"
         android:id="@+id/historyFragment"
-        android:icon="@drawable/search"/>
+        android:icon="@drawable/submit"/>
     <item android:title="History"
         android:id="@+id/searchFragment"
         android:icon="@drawable/history"/>

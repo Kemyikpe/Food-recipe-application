@@ -13,12 +13,9 @@ import com.starthub.food_recipe.databinding.FragmentMenuBottomSheetBinding
 
 class MenuBottomSheetFragment : BottomSheetDialogFragment() {
     private lateinit var  binding :FragmentMenuBottomSheetBinding
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,7 +24,16 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
         binding . buttonBack.setOnClickListener {
             dismiss()
         }
-        val  menuFoodName = listOf("Burger","sandwich","momo","item","sandwish","momo","Burger","momo")
+        val  menuFoodName = listOf(
+            "Burger",
+            "sandwich",
+            "momo",
+            "item",
+            "sandwish",
+            "momo",
+            "Burger",
+            "momo"
+        )
         val  menuItemPrice = listOf("$5","$6","$9","$10","$10","$8","$8","$8",)
         val menuImage = listOf(
             R.drawable.mealone,
